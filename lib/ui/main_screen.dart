@@ -11,6 +11,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   bool _isLoading = false;
+  // ignore: unused_field
   bool _isEmpty = false;
   final TextEditingController _searchController = TextEditingController();
   List<Github> _github = <Github>[];
