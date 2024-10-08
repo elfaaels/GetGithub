@@ -18,7 +18,7 @@ class GithubService {
         final List<dynamic> items =
             json['items']; // This is the list of repositories
         logger.d('Data fetched successfully: $items');
-        return Github.parseGithubList(items);
+        return Github.parseGithubList(items); // Parse the list of repositories
       } else {
         logger.e('Failed to load data: ${response.statusCode}');
         throw Exception('Failed to load data');

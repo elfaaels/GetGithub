@@ -10,7 +10,7 @@ import 'github_service_test.mocks.dart';
 
 @GenerateMocks([http.Client])
 void main() {
-  group('GithubService', () {
+  group('GithubServiceTest', () {
     late GithubService githubService;
     late MockClient mockClient;
     String baseURL = '';
