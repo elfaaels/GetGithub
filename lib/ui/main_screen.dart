@@ -11,8 +11,6 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   bool _isLoading = false;
-  // ignore: unused_field
-  bool _isEmpty = false;
   final TextEditingController _searchController = TextEditingController();
   List<Github> _github = <Github>[];
   String? name, description, url = 'N/A';
@@ -28,13 +26,10 @@ class _MainScreenState extends State<MainScreen> {
     _github = await _githubService.searchRepositories(query);
 
     if (_github.isEmpty) {
-      setState(() {
-        _isEmpty = true;
-      });
+      setState(() {});
     } else {
       setState(() {
         _isLoading = false;
-        _isEmpty = false;
       });
     }
   }
